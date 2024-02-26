@@ -146,6 +146,8 @@ services:
       - target:/workspace/target # Set target as a volume for performance. 
       # Uncomment the next line to improve performance when using node.
       #- node_modules:/vscode/node_modules 
+      # if you're running docker desktop with kubernetes this will mount the kubeconfig file from host for devcontainer to use
+      - ~/.kube/config:~/.kube/config 
 
     environment:
       LOGOUT_URL: http://keycloak-selenium:7712/realms/bionic-gpt/protocol/openid-connect/logout
