@@ -4,141 +4,74 @@
 
 {% extends "base.html" %}
 
-
 {% block seo %}
   {{ super() }}
 
-  {% set title = 'Run Generative AI On Premise' %}
-  {% set description = 'An Open Source No Code solution with full support for Retrieval Augmented Generation, built by people with years of experience in AI and enterprise software development.' %}
+  {% set title = 'This is the home page' %}
+  {% set description = 'Describe what your service does' %}
   
   {{ macros_head::seo(
     title=title, 
-    description=description,
-    main_image_url='https://bionic-gpt.com/github-readme.png'
+    description=description
   ) }}
 {% endblock seo %}
 
 {% block content %}
-
-
 <div class="flex flex-col items-center">
 
   {{ macros_hero::image_hero(
-    title="Run Generative AI On Premise and Boost Enterprise Productivity", 
-    sub_title='Our open source solution gives you the benefits of Chat GPT without worrying about
-    data leakage. Run AI on your private data securely with our integrated RAG features.',
-      cta2='Read the Documentation',
-      cta2_url='/docs',
-      cta1='Watch the Demo',
-      cta1_url='https://youtu.be/slRiOOM17tM'
+    title='A full Enterprise Grade Open Source LLM stack that 
+      deploys in minutes on your laptop and scales to the cloud', 
+    sub_title='Beautifully designed, expertly crafted components and templates, 
+      built by the makers of Tailwind CSS. The perfect starting point for your next project.',
+    cta1='Read the Documentation',
+    cta1_url='/docs',
+    cta2='Watch us Build a RAG Pipeline (Cominf soon)',
+    cta2_url='#'
   ) }}
-
-
 
   {{ macros_features::image_feature(
-    title='Accelerate Generative AI Adoption', 
-    sub_title='Text and Code Generation',
-    text='The low hanging fruit of Gen AI. With just these 2 features you unlock proven productivity gains.',
-    title1='Text Generation.',
-    text1='Generative AI excels in creative writing and automated content creation. LLMs can produce human-like text for various purposes, from generating news articles to crafting marketing copy.',
-    title2='Code Generation.',
-    text2="LLM's are trained on a vast corpus of code data from different programming languages, and therefore they're familiar with a wide array of coding styles, idioms, and best practices.",
-    title3="Chat Console",
-    text3='Our console gives your enterprise a Chat GPT user experience but with the safety of being on premise and therefore no data leakage.',
-    image='/github-readme.png'
-  ) }}
-
-
-  {{ macros_features::small_image_feature(
-    title="LLM's are scarce resources you need the protection of who is doing what and when", 
-    sub_title="Give your Data Scientists and Engineers an API for Innovation",
-    text='Our API gateway allows you to share LLM resources with the safety of a secure audit trail.',
-    image='/landing-page/jupyter-notebook.jpeg'
-  ) }}
-
-
-
-  {{ macros_features::image_feature(
-    title='A Team Based Approach', 
-    sub_title='No Code - Retrieval Augmented Generation',
-    text='Teams manage their own datasets for use in RAG and fine tuning.',
-    title1='Segmented Data.',
-    text1="Teams manage their own data and can decide how best to share it. 
-      Data is segregated at the database level.",
-    title2='Self Manage Teams.',
-    text2='There are no restrictions on the number of teams and teams are self managed.
-      Team administrators can add new users.',
-    title3="Role Based Access Control",
-    text3='Teams can manage the roles a user has from contributer to administrator. A central
-      system administrator role can manage the whole system.',
-    image='landing-page/teams.png'
-  ) }}
-
-
-  {{ macros_features::small_image_feature(
-    title="LLM's models are resource intensive you controls to help find issues.", 
-    sub_title='Full Audit Trail',
-    text='We audit all accesses to your models to help identify issues with performance and rogue processes.',
-    image='/landing-page/audit-trail.png'
+    title='Team based Chat', 
+    sub_title='A better workflow',
+    text='Some text',
+    title1='Prompt Engineering.',
+    text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title2='Retreival Augmented Generation.',
+    text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title3="API's.",
+    text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    image='/landing-page/documentation-screenshot.png'
   ) }}
 
   {{ macros_features::quad_feature(
     title='Deploy one of our models or integrate with any provider', 
-    sub_title='Private Cloud or Your Data Center',
-    text='We fully support both options and can integrate with any provider',
+    sub_title='On Prem or managed models',
+    text='Some text',
     title1='Open Source Quantized Models.',
-    text1='We integrate seemlessly with most open source AI models and out of the 
-      box we run against LLama 2 7B.',
-    title2='Google, Amazon, Azure...',
-    text2='If you choose to use a provider either from the publi cloud or via a 
-      private cloud with have integrations with all the main suppliers.',
-    title3="Multiple Models",
-    text3='We can run against more than 1 model at a time allowing you to test use
-      cases by easily switching between models',
-    title4="Hybrid",
-    text4='Perhaps you have a mixture of use cases some private some not so. 
-      We support connecting to models from both areas.'
+    text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title2='Connect to Azure, Google, Amazon and more',
+    text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title3="Secure Cloud.",
+    text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title4="Public Cloud.",
+    text4='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'
   ) }}
-
-
 
   {{ macros_features::small_image_feature(
-    title='Support for PDF, Excel, Word, TXT, and more including OCR', 
-    sub_title='Integration with over 300 Data Sources',
-    text='Our Data Pipeline API allows you to automate document uploads.',
-    image='/landing-page/airbyte.png'
-  ) }}
-
-
-  {{ macros_features::image_feature(
-    title='Enterprise Grade Security', 
-    sub_title='Open Source and Enterprise Ready',
-    text='Transport encryption, authentication, authorization, data segragation and more...',
-    title1='SSO and Siem',
-    text1='Our modular architecture allows us to adapt to your authentication and security needs.',
-    title2='Support Contracts.',
-    text2='Peace of mind knowing that the project maintainers are on call to help with your success.',
-    title3="Consultancy",
-    text3='We also can help with the full lifecycle of your Generative AI project. 
-      Trust the experts.',
-    image='landing-page/github.png'
-  ) }}
-
-
-  {{ macros_features::small_image_feature(
-    title="The easiest enterprise deployment you've ever seen",
-    sub_title='Try it out on a Laptop and then scale to the data center.',
-    text='BionicGPT can deploy to a Laptop for testing (docker-compose) and scales seemlessly to Kubernetes for production.',
-    image='landing-page/kubernetes.png'
-  ) }}
-
-</div>
-
-<div class="flex flex-col items-center mb-6">
-  {{ macros_cta::footer_cta(
-    title="You're seconds away from trying us out", 
-    cta1='Read the Documentation',
-    cta1_url='/docs'
+    title='Team based Chat', 
+    sub_title='A better workflow',
+    text='Some text',
+    image='/landing-page/documentation-screenshot.png'
   ) }}
 </div>
+
+<div class="">
+{{ macros_cta::footer_cta_pic(
+  title="You're seconds away from trying us out", 
+  cta1='Read the Documentation',
+  cta1_url='/docs',
+  image='/landing-page/cloak-screenshot.png'
+) }}
+</div>
+
 {% endblock content %}

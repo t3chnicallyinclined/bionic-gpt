@@ -1,25 +1,23 @@
-# The URL the site will be built for
-base_url = "https://tech-startup-theme.pages.dev"
-title = "Tech Startup"
-theme = "tech-startup-theme"
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
++++
+title = "Configuration"
+weight = 20
++++
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+The `[extra]` section of the `config.toml` files allows you to configure certains arts of the theme.
 
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-highlight_theme = "css"
+## config.toml
 
-highlight_themes_css = [
-  { theme = "kronuz", filename = "syntax-theme.css" },
-]
 
+
+```toml
 [extra]
-copyright = "Copyright 2021 - "
+copyright = "Copyright 2021 - 2022"
+
+# Every page CTA. At the bottom of every blog post we have a cta
+every_page_cta = { title = "Your 30 seconds away from trying us out", cta_url = "/blog", cta_button = "Sign Up" }
+
+# On the footer we have a signup button and a call to action, set the text here
+footer_cta = { title = "Sign up for our service", prompt = "Get control of your secrets and add security.", cta_url = "/blog", cta_button = "Check it Out" }
 
 # Where shall we point the sign in and sign up buttons.
 authentication = { sign_up = "/blog", sign_in = "/blog" }
@@ -53,15 +51,10 @@ resources_2 = [
 
 menu_items = [
     {name = "Pricing", url = "/pricing"},
-    {name = "Contact", url = "/contact"},
-    {name = "Blog", url = "/blog"},
 ]
 
 # Documentation sections
 doc_sections = [
     {name = "Reference", location = "reference"},
 ]
-
-# Blog tile and subtitle
-blog_title = "Our Blog"
-blog_subtitle = "Things to read"
+```
