@@ -16,7 +16,8 @@ ARG ZOLA_VERSION=0.17.2
 RUN sudo curl -OL https://github.com/getzola/zola/releases/download/v$ZOLA_VERSION/zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz \
     && sudo tar -xvf zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz \
     && sudo mv zola /usr/bin/zola \
-    && sudo chmod +x /usr/bin/zola
+    && sudo chmod +x /usr/bin/zola \
+    && sudo rm zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz
 
 # all the volumes configured in the docker-compose.yml
 ARG USERNAME=vscode
