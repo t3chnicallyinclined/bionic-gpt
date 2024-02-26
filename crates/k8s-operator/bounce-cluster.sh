@@ -1,7 +1,9 @@
-kind delete cluster --name bionic-gpt-cluster
-kind create cluster --name bionic-gpt-cluster --config=/workspace/crates/k8s-operator/config/kind-config.yaml
-kind export kubeconfig --name bionic-gpt-cluster
-sed -i 's,https://0.0.0.0,https://host.docker.internal,g' ~/.kube/config
+#if using docker desktop on host with kubernetes then kind is not needed here. You can copy over your kubeconfig file from host
+#kind delete cluster --name bionic-gpt-cluster
+#kind create cluster --name bionic-gpt-cluster --config=/workspace/crates/k8s-operator/config/kind-config.yaml
+#kind export kubeconfig --name bionic-gpt-cluster
+
+#sed -i 's,https://0.0.0.0,https://host.docker.internal,g' ~/.kube/config
 kubectl create namespace bionic-gpt
 kubectl apply -n bionic-gpt -f /workspace/crates/k8s-operator/config/bionics.bionic-gpt.com.yaml
 kubectl apply -f /workspace/crates/k8s-operator/config/bionic.yaml
