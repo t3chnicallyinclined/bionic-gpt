@@ -4,3 +4,6 @@
 [submodule "/workspace/website/themes/tech-startup-theme"]
 	path = /workspace/website/themes/tech-startup-theme
 	url = https://github.com/purton-tech/tech-startup-theme
+[submodule "website/themes/tech-start-theme"]
+	path = website/themes/tech-start-theme
+	url = https://github.com/purton-tech/tech-startup-theme
