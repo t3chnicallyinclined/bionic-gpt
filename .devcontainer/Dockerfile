@@ -21,6 +21,9 @@ RUN sudo curl -OL https://github.com/getzola/zola/releases/download/v$ZOLA_VERSI
 # all the volumes configured in the docker-compose.yml
 ARG USERNAME=vscode
 RUN sudo mkdir -p /workspace/target && sudo chown $USERNAME:$USERNAME /workspace/target
+RUN sudo groupadd -g 1001 dockerhost && \
+    # Add your user to this group
+    sudo usermod -aG dockerhost $USERNAME
 
 RUN sudo curl -OL https://dl.min.io/client/mc/release/linux-amd64/mc \
     && sudo chmod +x mc \
