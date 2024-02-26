@@ -36,4 +36,4 @@ alias wt=watch-tailwind
 alias spell='docker run --rm -ti -v $HOST_PROJECT_PATH/website/content:/workdir tmaier/markdown-spellcheck:latest "**/*.md"'
 
 # Ollama
-alias ollama='docker exec -it bionic-gpt_devcontainer_llm-api_1 ollama'
+alias ollama='docker exec -it bionic-gpt_devcontainer-llm-api-1 ollama'
