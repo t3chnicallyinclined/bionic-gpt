@@ -12,7 +12,7 @@ pub fn HistoryDrawer(
 ) -> Element {
     cx.render(rsx! {
         Drawer {
-            label: "Your History",
+            label: "Your history",
             trigger_id: &trigger_id,
             DrawerBody {
                 history.iter().map(|history| {
